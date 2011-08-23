@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>fileTriggers</key>
+        <dict>
+            <key>createu</key>
+            <string>db\migrate\20110823085040_create_users.rb</string>
+            <key>data</key>
+            <string>config\database.yml</string>
+            <key>gem</key>
+            <string>Gemfile</string>
+            <key>routes</key>
+            <string>config\routes.rb</string>
+            <key>user</key>
+            <string>app\models\user.rb</string>
+        </dict>
+    </dict>
+</plist>
