@@ -1,0 +1,9 @@
+<div id="articles_list">
+	<% @articles.each do |article| %>
+		<p><a href="/articles/show/<%= article.id %>">
+			<%= article.title %>
+			<span class="category">[<%= article.category.value %>]</span>
+			<span class="date"><%= article.updated_at.to_formatted_s(:db) %></span>
+		</a></p>
+	<% end %>	
+</div>

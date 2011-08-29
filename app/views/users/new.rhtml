@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/stylesheets/users/new.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+<form action="/users/create" method="post" accept-charset="utf-8">
+	<table border="0">
+		<tr>
+			<td class="right"><label for="name">用户名</label></td>
+			<td><input type="text" name="name" value="" id="name"></td>
+			<td class="error"><span id="name_error"></span></td>
+		</tr>
+		<tr>
+			<td class="right"><label for="pwd">密码</label></td>
+			<td><input type="password" name="pwd" value="" id="pwd"></td>
+			<td class="error"><span id="pwd_error"></span></td>
+		</tr>
+		<tr>
+			<td class="right"><label for="repwd">重复密码</label></td>
+			<td><input type="password" name="repwd" value="" id="repwd"></td>
+			<td class="error"><span id="repwd_error"></span></td>
+		</tr>
+	</table>
+	<p style="text-align:center;"><input type="submit" value="创建新用户"></p>
+</form>
+<%= raw include_page_script("users_new") %>

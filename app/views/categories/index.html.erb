@@ -1,0 +1,5 @@
+<a href="/categories/new">New</a>
+
+<% @categories.each do |category| %>
+<p><%= category.value %><a href="/categories/edit/<%= category.id %>">Edit</a><a href="/categories/delete/<%= category.id %>">Delete</a></p>
+<% end %>

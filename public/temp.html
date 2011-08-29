@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+	<head>
+		<title>Referrer丢失场景</title>
+		<meta name="charset" content="utf-8">
+		<link rel="stylesheet" href="/stylesheets/articles.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<link rel="stylesheet" href="/stylesheets/SyntaxHighlighter.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<script src="/javascripts/lib/jQuery.js" charset="utf-8" type="text/javascript"></script>
+		<script src="/javascripts/beautyOfCode.js" charset="utf-8" type="text/javascript"></script>
+	</head>
+	<body>
+		<p class="title">修改Location对象进行页面导航</p>
+		<pre class="code">
+			<code class="javascript">window.location.hostname = "example.com";</code>
+		</pre>
+		<p class="content">结果：</p>
+		<ul>
+			<li>IE5.5+ 下返回空字符串</li>
+			<li>Chrome3.0+，Firefox3.5，Opera9.6，Safari3.2.2均正常返回来源网页</li>
+		</ul>
+		<p class="title">window.open方式打开新窗口</p>
+		<pre class="code"><a href="#" onclick="window.open('http://www.google.com')">访问Google</a></pre>
+		<p class="content">结果：</p>
+		<ul>
+			<li>IE5.5+ 下返回空字符串</li>
+			<li>Chrome3.0+，Firefox3.5，Opera9.6，Safari3.2.2均正常返回来源网页</li>
+		</ul>
+		<p class="content">如果是同个域名下通过此方式跳转的，那么可以通过访问window.opener对象去获取丢失的referrer信息。</p>
+		<p class="title">鼠标拖拽打开新窗口</p>
+		<p class="content">结果：</p>
+		<ul>
+			<li>全都丢失referrer</li>
+		</ul>
+		<p class="title">点击Flash内部链接</p>
+		<p class="content">结果：</p>
+		<ul>
+			<li>IE下，document.referrer读取到的值是空的,实际上HTTP请求中的Referer报文头却是有值的</li>
+			<li>Chrome4.0下点击Flash到达新窗口之后，Referrer也是指向的Flash文件的地址</li>
+			<li>Chrome3.0和Safari3.2是一样的，都是会丢失Referrer信息。</li>
+			<li>Opera则和Firefox一样，Referrer的值都是来源网页的地址。</li>
+		</ul>
+		<p class="title">HTTPS跳转到HTTP</p>
+		<p class="code">window.location.hostname = "example.com";</p>
+		<p class="content">结果：</p>
+		<ul>
+			<li>全都丢失referrer</li>
+		</ul>
+		<script type="text/javascript">
+			    $(".code").beautifyCode('javascript');
+		</script>
+	</body>
+</html>

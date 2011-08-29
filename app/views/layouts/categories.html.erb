@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title><%= @title %></title>
-  
   <script src="/javascripts/lib/jquery.js" charset="utf-8" type="text/javascript"></script>
   <script src="/javascripts/lib/core_extend.js" charset="utf-8" type="text/javascript"></script>
   <link rel="stylesheet" href="/stylesheets/css.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+  <link rel="stylesheet" href="/stylesheets/articles/article.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -14,11 +14,21 @@
 		<div class="float_right flash_msg_close_btn">X</div>
 	</div>
 	<div id="container">
-		<div id="banner">
+	<div id="banner">
+		<div class="logo">
 			<h1>Windinsky</h1>
 			<div class="description">A&nbsp;&nbsp;&nbsp;FrontEnd&nbsp;&nbsp;&nbsp;Blog&nbsp;,&nbsp;welcome!</div>
 		</div>
+		<div class="links">
+			<a href="/articles/new">创建新文章</a>
+			<a href="/articles/index">文章列表</a>
+			<a href="/categories/index">分类管理</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="article_container">
 		<%= yield %>
+	</div>
 	</div>
   <script src="/javascripts/application.js" charset="utf-8" type="text/javascript"></script>
 </body>

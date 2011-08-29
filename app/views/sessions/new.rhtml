@@ -1,0 +1,16 @@
+<%= raw include_page_css("sessions/new") %>
+<form action="/sessions/create" method="post" accept-charset="utf-8">
+	<table border="0">
+		<tr>
+			<td class="right" width="250"><label for="name">用户名：</label></td>
+			<td><input type="text" name="name" value="" id="name"></td>
+		</tr>
+		<tr>
+			<td class="right"><label for="pwd">密码：</label></td>
+			<td><input type="password" name="pwd" value="" id="pwd"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" name="submit" value="Submit"></td>
+		</tr>
+	</table>
+</form>

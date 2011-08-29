@@ -1,0 +1,76 @@
+body{
+	background:silver;
+}
+
+#banner{
+	background:#3c3230;
+	padding:20px 30px;
+	color:white;
+	text-shadow:1px 1px black;
+}
+#banner a{
+	text-shadow:none;
+}
+#banner a{
+	display:inline-block;
+	width:100px;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	text-decoration:none;
+	color:white;
+	border-radius:5px;
+	border:1px solid white;
+}
+#banner a:hover{
+	border:1px solid black;
+	background:white;
+	color:black;
+}
+#banner a:active{
+	box-shadow:inset 1px 1px 1px white;
+}
+#banner .logo{float:left;}
+#banner .links{float:right}
+.clear{clear:both;}
+#article_container{
+}
+.article_title{
+	margin-left:20px;
+	font-family:consolas,微软雅黑;
+	color:white;
+	font-size:18px;
+}
+#articles_list{
+	margin:auto;
+	width:800px;
+}
+#articles_list p{
+	margin:0;
+}
+#articles_list p a{
+	display:block;
+	padding:10px 30px;
+	text-decoration:none;
+	font-size:18px;
+	font-family:微软雅黑;
+	border-bottom:1px dashed #3c352d;
+	color:#3c352d;
+}
+#articles_list p a:hover{
+	background:#cfccc4;
+}
+#articles_list p a span.category{
+	display:inline-block;
+	margin-left:20px;
+	font-size:12px;
+	color:#f90;
+}
+#articles_list p a span.date{
+	display:inline-block;
+	margin-left:20px;
+	font-size:12px;
+	color:black;
+	float:right;
+	margin-right:30px;
+}

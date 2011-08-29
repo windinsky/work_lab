@@ -1,0 +1,98 @@
+body{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:"微软雅黑";
+}
+.code{
+	font-family:consolas,monaco;
+}
+.red{
+	color:red;
+}
+.yellow{
+	color:yellow;
+}
+.blue{
+	color:blue;
+}
+.orange{
+	color:#f90;
+}
+.gray{
+	color:gray;
+}
+.silver{
+	color:silver;
+}
+.article_title{
+	font-size:16px;
+	color:#88e;
+	text-shadow:1px 1px silver
+}
+#container{
+	width:1202px;
+	background:#f9f5ec;
+	margin:0 auto;
+	box-shadow:3px 3px 0 black;
+	border:1px solid #80817c;
+}
+.right{
+	text-align:right;
+}
+#flash_msg{
+	background:black;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	padding:20px;
+	text-align:center;
+	font-family:微软雅黑;
+	text-shadow:1px 1px 1px silver;
+	color:white;
+	font-size:18px;
+	z-index:1000;
+	display:none;
+	opacity:0.8;
+}
+#flash_msg div{
+	display:inline-block;
+}
+.flash_msg_close_btn{
+	width:20px;
+	height:20px;
+	color:white;
+	font-size:14px;
+	margin-right:50px;
+	border:2px solid white;
+	border-radius:10px;
+	line-height:20px;
+	cursor:pointer;
+}
+.flash_msg_close_btn:hover{
+	background:white;
+	color:black;
+}
+.float_right{
+	float:right;
+}
+.float_left{
+	float:left;
+}
+#banner{
+	background:#3c3230;
+	padding:20px 30px;
+	color:white;
+	text-shadow:1px 1px black;
+}
+#banner h1{
+	font-family:"Times New Roman";
+	font-size:48px;
+	margin:0;
+	text-shadow:2px 2px black;
+}
+#banner .description{
+	font-family:Georgia, serif;
+	font-style:italic;
+	font-size:14px;
+}

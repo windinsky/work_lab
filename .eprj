@@ -4,16 +4,130 @@
     <dict>
         <key>fileTriggers</key>
         <dict>
+            <key>addco</key>
+            <string>db\migrate\20110826053009_add_column_to_categories.rb</string>
+            <key>apph</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>apphtml</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>appjs</key>
+            <string>public\javascripts\application.js</string>
+            <key>applica</key>
+            <string>app\views\layouts\application.html.erb</string>
+            <key>applicationcon</key>
+            <string>app\controllers\application_controller.rb</string>
+            <key>applicationjs</key>
+            <string>public\javascripts\application.js</string>
+            <key>arcon</key>
+            <string>app\controllers\articles_controller.rb</string>
+            <key>arcss</key>
+            <string>public\stylesheets\articles\article.css</string>
+            <key>articlecon</key>
+            <string>app\controllers\articles_controller.rb</string>
+            <key>articlehtml</key>
+            <string>app\views\layouts\articles.html.erb</string>
+            <key>articlehtmler</key>
+            <string>app\views\layouts\articles.html.erb</string>
+            <key>articlerb</key>
+            <string>app\models\article.rb</string>
+            <key>articles</key>
+            <string>db\migrate\20110825053436_create_articles.rb</string>
+            <key>articlescon</key>
+            <string>app\controllers\articles_controller.rb</string>
+            <key>articlescss</key>
+            <string>public\stylesheets\articles.css</string>
+            <key>articleserb</key>
+            <string>app\views\layouts\articles.html.erb</string>
+            <key>articleshtml</key>
+            <string>app\views\layouts\articles.html.erb</string>
+            <key>articon</key>
+            <string>app\controllers\articles_controller.rb</string>
+            <key>artihtml</key>
+            <string>app\views\layouts\articles.html.erb</string>
+            <key>auth</key>
+            <string>lib\auth.rb</string>
+            <key>cate</key>
+            <string>db\migrate\20110825054302_create_categories.rb</string>
+            <key>catecon</key>
+            <string>app\controllers\categories_controller.rb</string>
+            <key>categ</key>
+            <string>app\models\category.rb</string>
+            <key>catego</key>
+            <string>app\controllers\categories_controller.rb</string>
+            <key>categocon</key>
+            <string>app\controllers\categories_controller.rb</string>
+            <key>caterb</key>
+            <string>app\models\category.rb</string>
+            <key>codefo</key>
+            <string>public\code_format_test.html</string>
             <key>createu</key>
             <string>db\migrate\20110823085040_create_users.rb</string>
+            <key>css</key>
+            <string>public\stylesheets\users\new.css</string>
+            <key>css.cs</key>
+            <string>public\stylesheets\css.css</string>
+            <key>css.css</key>
+            <string>public\stylesheets\css.css</string>
+            <key>csscss</key>
+            <string>public\stylesheets\css.css</string>
             <key>data</key>
             <string>config\database.yml</string>
+            <key>databs</key>
+            <string>config\database.yml</string>
+            <key>databse</key>
+            <string>..\..\work_lab\config\database.yml</string>
+            <key>edit</key>
+            <string>app\views\articles\edit.html.erb</string>
+            <key>envi</key>
+            <string>config\environment.rb</string>
+            <key>format</key>
+            <string>public\javascripts\code_format.js</string>
             <key>gem</key>
             <string>Gemfile</string>
+            <key>gemfi</key>
+            <string>Gemfile</string>
+            <key>gemfil</key>
+            <string>Gemfile</string>
+            <key>he</key>
+            <string>app\helpers\application_helper.rb</string>
+            <key>hel</key>
+            <string>app\helpers\application_helper.rb</string>
+            <key>helper</key>
+            <string>app\helpers\application_helper.rb</string>
+            <key>index</key>
+            <string>app\views\articles\index.html.erb</string>
+            <key>js</key>
+            <string>public\javascripts\pages\users_new.js</string>
+            <key>new</key>
+            <string>app\views\articles\new.html.erb</string>
+            <key>new.css</key>
+            <string>public\stylesheets\users\new.css</string>
+            <key>newjs</key>
+            <string>public\javascripts\pages\users_new.js</string>
+            <key>newr</key>
+            <string>app\views\users\new.rhtml</string>
+            <key>route</key>
+            <string>config\routes.rb</string>
             <key>routes</key>
             <string>config\routes.rb</string>
+            <key>sesscon</key>
+            <string>app\controllers\sessions_controller.rb</string>
+            <key>session</key>
+            <string>app\controllers\sessions_controller.rb</string>
+            <key>sessioncon</key>
+            <string>app\controllers\sessions_controller.rb</string>
+            <key>show</key>
+            <string>app\views\articles\show.html.erb</string>
             <key>user</key>
             <string>app\models\user.rb</string>
+            <key>user.rb</key>
+            <string>app\models\user.rb</string>
+            <key>usercon</key>
+            <string>app\controllers\users_controller.rb</string>
+            <key>userrb</key>
+            <string>app\models\user.rb</string>
+            <key>zh</key>
+            <string>config\locales\zh.yml</string>
         </dict>
     </dict>
 </plist>
