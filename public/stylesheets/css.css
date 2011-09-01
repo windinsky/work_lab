@@ -96,3 +96,17 @@ body{
 	font-style:italic;
 	font-size:14px;
 }
+.data_empty{
+	padding:30px;
+	font-size:24px;
+	font-weight:bolder;
+	text-align:center;
+}
+.data_empty a{
+	display:inline-block;
+	color:#f90;
+	text-decoration:none;
+}
+.data_empty a:hover{
+	color:#A52A2A;
+}

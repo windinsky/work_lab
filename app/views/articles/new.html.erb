@@ -1,10 +1,32 @@
-<form action="/articles/create" method="post" accept-charset="utf-8">
-	<div><label for="title">Title</label><input type="text" name="title" value=""></div>
-	<div><select name="category_id" id="category_id">
+<div class="mode_select">
+	<a href="javascript:$('#editormode').show();$('#framemode').hide();">编辑器模式</a>
+	<a href="javascript:$('#editormode').hide();$('#framemode').show();">frame模式</a>
+</div>
+<div id="framemode" style="display:none">
+<form action="/articles/create" method="post" accept-charset="utf-8" class="new_article_form">
+	<div><label for="title">标题</label><input type="text" name="title" value=""></div>
+	<div><label for="category_id">分类</label><select name="category_id" id="category_id">
 		<% @categories.each do |c| %>
 		<option value="<%= c.id %>"><%= c.value %></option>
 		<% end %>
 	</select></div>
 	<div><textarea name="content"></textarea></div>
 	<div><input type="submit" name="submit" value="提交" id="submit"></div>
-</form>
+</form>	
+</div>
+<div id="editormode">
+<form action="/articles/create" method="post" accept-charset="utf-8" class="new_article_form">
+	<div><label for="title">标题</label><input type="text" name="title" value=""></div>
+	<div><label for="category_id">分类</label><select name="category_id" id="category_id">
+		<% @categories.each do |c| %>
+		<option value="<%= c.id %>"><%= c.value %></option>
+		<% end %>
+	</select></div>
+	<div>
+		<input type="hidden" name="content" id="content">
+		<iframe src="/editor/Edit/editor.htm?id=content&ReadCookie=0" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="No" width="700" height="460"></iframe>
+	</div>
+	
+	<div><input type="submit" name="submit" value="提交" id="submit"></div>
+</form>		
+</div>

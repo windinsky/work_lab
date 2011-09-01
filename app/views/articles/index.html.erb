@@ -1,9 +1,40 @@
+<% if @articles.empty? %>
+	<div class="data_empty">
+		您还没有文章，<a href="/articles/new">新建一篇吧^_^</a>
+	</div>
+<% else %>
 <div id="articles_list">
 	<% @articles.each do |article| %>
-		<p><a href="/articles/show/<%= article.id %>">
-			<%= article.title %>
-			<span class="category">[<%= article.category.value %>]</span>
-			<span class="date"><%= article.updated_at.to_formatted_s(:db) %></span>
-		</a></p>
-	<% end %>	
+		<div>
+			<a href="/articles/show/<%= article.id %>">
+				<%= article.title %>
+				<% unless article.category.nil? %>
+				<span class="category">[<%= article.category.value %>]</span>
+				<% end %>
+				<span class="date"><%= article.updated_at %></span>
+			</a>
+			<p data-id="<%= article.id %>" class="delete_article">X</p>
+		</div>
+	<% end %>
+	<div class="clear"></div>
 </div>
+<% end %>
+<script type="text/javascript">
+	$(".delete_article").live("click",function(){
+		var id = $(this).attr("data-id");
+		if (confirm("Are you sure?")) {
+			$.ajax({
+				url: "/articles/delete/" + id,
+				success: function(result){
+					if (result == "1") {
+						flash_msg_controller.show_text("删除成功");
+						$(this).parent().fadeOut(function(){
+							$(this).parent().remove();
+						}.bind(this));
+					};
+				}
+			})
+		};
+		
+	})
+</script>

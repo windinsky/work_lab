@@ -8,4 +8,12 @@ class Article < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :category
 	
+	def self.visiable
+		find(:all,:conditions => {:visiable => true})
+	end
+	
+	def self.invisiable
+		find(:all,:conditions => {:visiable => false})
+	end
+	
 end

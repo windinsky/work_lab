@@ -1,4 +1,6 @@
 ﻿class UsersController < ApplicationController
+	
+	
 	def index
 		@users = User.all
 	end
@@ -11,7 +13,7 @@
 		user = User.new({:name => params[:name], :pwd => params[:pwd]})
 		if user.t_save
 			flash[:msg] = "注册成功";
-			redirect_to login_path
+			redirect_to login_path\
 		else
 			flash[:msg] = user.errors.collect{|key,value| value}.join("  、  ")
 			redirect_to "/users/new"
@@ -40,5 +42,15 @@
 			wants.json { render(:text => json.to_json) } 
 		end
 	end
+	
+	# 	def collect
+	# 	@serial = params[:n]
+	# 	@text = ["奥巴马是人才！","奥巴马辞职，出任央视主播","奥巴马发布记者招待会","奥巴马认为央视工资更高"][@serial.to_i]
+	# 	@length = @text.length*2
+	# 	respond_to do |wants|
+	# 		wants.html { render "collect.js.erb" }
+	# 		wants.js { render "collect.js.erb" }
+	# 	end
+	# end
 	
 end

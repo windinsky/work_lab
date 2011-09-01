@@ -1,5 +1,12 @@
-<a href="/categories/new">New</a>
-
-<% @categories.each do |category| %>
-<p><%= category.value %><a href="/categories/edit/<%= category.id %>">Edit</a><a href="/categories/delete/<%= category.id %>">Delete</a></p>
+<% if @categories.empty? %>
+	<div class="data_empty">
+		您还没有创建任何分类，<a href="/categories/new">创建一个吧^_^</a>
+	</div>
+<% else %>
+	<% @categories.each do |category| %>
+		<p>
+			<%= category.value %>
+			<a href="/categories/edit/<%= category.id %>">Edit</a><a href="/categories/delete/<%= category.id %>">Delete</a>
+		</p>
+	<% end %>
 <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110826053009) do
+ActiveRecord::Schema.define(:version => 20110831035949) do
 
 # Could not dump table "articles" because of following ArgumentError
 #   invalid date

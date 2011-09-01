@@ -45,32 +45,77 @@ body{
 	margin:auto;
 	width:800px;
 }
-#articles_list p{
+#articles_list div{
 	margin:0;
+	clear:both;
+	width:800px;
 }
-#articles_list p a{
+#articles_list div a{
 	display:block;
+	float:left;
 	padding:10px 30px;
 	text-decoration:none;
 	font-size:18px;
 	font-family:微软雅黑;
 	border-bottom:1px dashed #3c352d;
 	color:#3c352d;
+	width:700px;
 }
-#articles_list p a:hover{
+#articles_list div p.delete_article{
+	display:block;
+	float:left;
+	width:10px;
+	cursor:pointer;
+}
+#articles_list div a:hover{
 	background:#cfccc4;
 }
-#articles_list p a span.category{
+#articles_list div a span.category{
 	display:inline-block;
 	margin-left:20px;
 	font-size:12px;
 	color:#f90;
 }
-#articles_list p a span.date{
+#articles_list div a span.date{
 	display:inline-block;
 	margin-left:20px;
 	font-size:12px;
 	color:black;
 	float:right;
 	margin-right:30px;
+}
+.mode_select a{
+	color:#3c3230;
+	text-decoration:none;
+}
+.new_article_form{
+	width:700px;
+	margin:auto;
+}
+.new_article_form label{
+	font-size:18px;
+	color:#3c3230;
+	width:100px;
+	display:inline-block;
+}
+.new_article_form div{
+	padding:5px;
+}
+.new_article_form input[type=text]{
+	border-radius:3px;
+	border:1px solid silver;
+	width:300px;
+	height:24px;
+	line-height:18px;
+	font-size:14px;
+	font-family:微软雅黑;
+}
+.new_article_form select{
+	border-radius:3px;
+	border:1px solid silver;
+	width:302px;
+	height:28px;
+	line-height:18px;
+	font-size:14px;
+	font-family:微软雅黑;
 }

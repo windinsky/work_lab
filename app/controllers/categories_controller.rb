@@ -17,6 +17,7 @@ class CategoriesController < ApplicationController
 	def delete
 		category = current_user.categories.find(params[:id])
 		if category
+			category.articles.each(:delete)
 			category.delete
 		end
 		redirect_to "/categories/index"

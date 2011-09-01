@@ -1,0 +1,19 @@
+(function() {
+    var l = <%=@length %>;//max length of advertise content
+    //var size = null;//font-size
+    var serial_number = <%=@serial %>;//used for locating parent node
+    var content = "<%= @text %>";
+    for (var i = 0; i < content.length; i++)l -= (content.charCodeAt(i) > 128 ? 2: 1);//diff chars,diff width
+    var link = "http://www.baidu.com";
+    var p = ipy_link_tags[serial_number].parentNode;
+    //get parent node
+    var a = document.createElement("a");
+    a.href = link;
+    a.innerHTML = content;
+    if (l < 0) {
+        alert("content is too long");
+    };
+    //a.setAttribute("class","videoNewsLeft");
+    a.setAttribute("target","_blank");
+    p.appendChild(a);
+})();

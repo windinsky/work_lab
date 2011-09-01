@@ -28,7 +28,7 @@
 	end
 	
 	def edit
-		@article = user.articles.find(params[:id])
+		@article = current_user.articles.find(params[:id])
 		if @article
 			@categories = current_user.categories
 		else
@@ -38,7 +38,7 @@
 	end
 	
 	def update
-		article = user.articles.find(params[:id])
+		article = current_user.articles.find(params[:id])
 		if article.update_attributes({:title => params[:title],:content => params[:content], :category_id => params[:category_id]})
 			redirect_to "/articles/show/#{article.id}"
 		else
@@ -48,6 +48,7 @@
 	end
 	
 	def delete
-		
+		article = current_user.articles.find(params[:id])
+		render(:text => article.update_attributes({:visiable => false}) ? "1" : "0") 
 	end
 end
