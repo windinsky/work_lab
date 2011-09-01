@@ -4,7 +4,7 @@
 	
 	def index
 		@title = "文章列表"
-		@articles = current_user.articles
+		@articles = current_user.articles.visiable
 	end
 	
 	def show
